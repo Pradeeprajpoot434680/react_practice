@@ -4,28 +4,39 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-function CustomApp()
-{
-  return(
-    <div>
-      this is my custom app
-    </div>
-  )
-}
+// function CustomApp()
+// {
+//   return(
+//     <div>
+//       this is my custom app
+//     </div>
+//   )
+// }
 
 
+// createRoot is used for It is used to create a root React tree. which will handle rendering your entire app. 
+//The .render() method on the object returned by createRoot() is used to render the React component tree into the DOM. I
 
 // createRoot(document.getElementById('root')).render(
 //   <StrictMode>
 //     <App />
 //   </StrictMode>,
 // )
+
+const obj = createRoot(document.getElementById('root'));
+console.log(obj);
+
+obj.render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
 // createRoot(document.getElementById('root')).render(
 //   <CustomApp/>
 // )
-const anotherElement = (
-  <a href="https://google.com" target='_blank'>visit google</a>
-)
+// const anotherElement = (
+//   <a href="https://google.com" target='_blank'>visit google</a>
+// )
 
 // it works it means that the components that renders changes in a object;
 // createRoot(document.getElementById('root')).render(
@@ -91,6 +102,6 @@ const reactElement = React.createElement(
 
 )
 
-createRoot(document.getElementById('root')).render(
-    reactElement//usernmea will come on screen
-  )
+// createRoot(document.getElementById('root')).render(
+  //   reactElement//usernmea will come on screen
+  // )

@@ -11,6 +11,15 @@ function App2()
         setCount(0);
     }else{
         setCount(count+1);
+        setCount(count+1);
+        setCount(count+1);
+        setCount(count+1);//only one time value of count will increase because usestate 
+        //do all the tasks in batches but whenever you passes the callback into thr setCount 
+        //then 
+        setCount(prevCount => prevCount+1);
+        setCount(prevCount => prevCount+1);
+        setCount(prevCount => prevCount+1);
+        //here you are using the previous value that will change the count  3 times at a single time
     }
         
   }
